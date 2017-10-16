@@ -2,7 +2,7 @@
 Description=Temperature control of Raspberry Pi fan through GPIO port
 
 [Service]
-ExecStart=/home/osmc/fanControl/fanControl
+ExecStart=$HOME/fanControl/fanControl
 Restart=on-success
 RestartSec=200ms
 ExecReload=/bin/kill -HUP $MAINPID
