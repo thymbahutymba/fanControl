@@ -1,0 +1,9 @@
+# don't include personal config
+config.h
+
+# include only source file
+*.o
+fanControl
+
+#don't include backup directory
+bak/**
