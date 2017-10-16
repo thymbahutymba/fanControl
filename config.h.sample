@@ -1,0 +1,11 @@
+#ifndef CONSTANT_VAR
+#define CONSTANT_VAR
+
+#include <string>
+
+extern const char token[] = "your token here";
+extern const char chat_id[] = "your chat id here";
+extern const char username[] = "your username here"; //optional
+extern const char name[] = "your name here"; //optional
+
+#endif
