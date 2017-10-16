@@ -6,7 +6,7 @@ simple raspberry fan control with telegram notification via bot
 [wiringPi](http://wiringpi.com/)
 
 ## compile
-`make`
+`$ make`
 
 ## copy service and start
 ```
