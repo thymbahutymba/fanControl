@@ -6,10 +6,16 @@ simple raspberry fan control with telegram notification via bot
 [wiringPi](http://wiringpi.com/)
 
 ## compile
-`$ make`
+```
+$ make
+```
 
 ## copy service and start
 ```
 # cp fanControl.service /lib/systemd/system/
 # systemctl start fanControl
+```
+### automatic start on boot
+```
+# systemctl enable fanControl
 ```
