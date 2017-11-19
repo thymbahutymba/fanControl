@@ -16,6 +16,7 @@ extern "C" void sendMessage(string);
 void handler(int SIG){
 	digitalWrite(pin, LOW);
 	cout << "Exit from fan control, signal " << SIG << " received." << endl;
+	sendMessage("fanControl stopped.");
 	exit(SIG);
 }
 
@@ -32,6 +33,7 @@ int main(){
 
 	wiringPiSetup();
 	pinMode(pin, OUTPUT);
+	sendMessage("fanControl started.");
 	for(;;){
 
         //read the temperature from the file

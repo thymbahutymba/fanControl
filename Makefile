@@ -1,5 +1,5 @@
 CXX=g++
-CPPFLAGS=-Wall
+CPPFLAGS=-Wall -O2
 LDLIBS=-lwiringPi -lcurl
 
 fanControl: fanControl.o requestCurl.o
