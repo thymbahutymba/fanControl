@@ -17,7 +17,7 @@ void handler(int SIG){
 	digitalWrite(pin, LOW);
 	cout << "Exit from fan control, signal " << SIG << " received." << endl;
 	sendMessage("fanControl stopped.");
-	exit(SIG);
+	exit(0);
 }
 
 int main(){
