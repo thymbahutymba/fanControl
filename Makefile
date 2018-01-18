@@ -13,3 +13,6 @@ requestCurl.o: requestCurl.cpp config.h
 
 clean: 
 	rm -f *.o
+
+install:
+	install -m 644 fanControl.service /usr/lib/systemd/system/
