@@ -36,23 +36,23 @@ int main(){
 	sendMessage("fanControl started.");
 	for(;;){
 
-        //read the temperature from the file
-        file.open("/sys/class/thermal/thermal_zone0/temp", ios_base::in);
-        file >> temp;
-        file.close();
+		//read the temperature from the file
+		file.open("/sys/class/thermal/thermal_zone0/temp", ios_base::in);
+		file >> temp;
+		file.close();
 
-        //calculate temperature as integer
-        temp /= c;
+		//calculate temperature as integer
+		temp /= c;
 		if(temp>MAX_TEMP && !digitalRead(pin)){
-            digitalWrite(pin, HIGH);
-            cout << "Fan on, current temp is: " << temp << "°C." << endl;
+			digitalWrite(pin, HIGH);
+			cout << "Fan on, current temp is: " << temp << "°C." << endl;
 			sendMessage("Fan on.");
-        };
+		};
 		if(temp<NORMAL_TEMP && digitalRead(pin)){
-            digitalWrite(pin, LOW);
-            cout << "Fan off, current temp is: " << temp << "°C." << endl;
+			digitalWrite(pin, LOW);
+			cout << "Fan off, current temp is: " << temp << "°C." << endl;
 			sendMessage("Fan off.");
-        };
+		};
 		delay(5*m2s);
 	};
 	return 0;
