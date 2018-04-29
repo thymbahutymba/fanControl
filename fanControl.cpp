@@ -46,12 +46,12 @@ int main(){
 		if(temp>MAX_TEMP && !digitalRead(pin)){
 			digitalWrite(pin, HIGH);
 			cout << "Fan on, current temp is: " << temp << "°C." << endl;
-			sendMessage("Fan on.");
+			//sendMessage("Fan on.");
 		};
 		if(temp<NORMAL_TEMP && digitalRead(pin)){
 			digitalWrite(pin, LOW);
 			cout << "Fan off, current temp is: " << temp << "°C." << endl;
-			sendMessage("Fan off.");
+			//sendMessage("Fan off.");
 		};
 		delay(5*m2s);
 	};
